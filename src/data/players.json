@@ -1,0 +1,1437 @@
+[
+  {
+    "id": "5208983",
+    "name": "Isobel Borlase",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/isobel-borlase.jpg"
+  },
+  {
+    "id": "3142250",
+    "name": "Jordin Canada",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/jordin-canada.jpg"
+  },
+  {
+    "id": "3058901",
+    "name": "Allisha Gray",
+    "team": "Atlanta Dream",
+    "allStar": true,
+    "image": "/players/allisha-gray.jpg"
+  },
+  {
+    "id": "4398915",
+    "name": "Naz Hillmon",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/naz-hillmon.jpg"
+  },
+  {
+    "id": "4398674",
+    "name": "Rhyne Howard",
+    "team": "Atlanta Dream",
+    "allStar": true,
+    "image": "/players/rhyne-howard.jpg"
+  },
+  {
+    "id": "3058895",
+    "name": "Brionna Jones",
+    "team": "Atlanta Dream",
+    "allStar": true,
+    "image": "/players/brionna-jones.jpg"
+  },
+  {
+    "id": "5017721",
+    "name": "Sika Kone",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/sika-kone.jpg"
+  },
+  {
+    "id": "5105740",
+    "name": "Indya Nivar",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/indya-nivar.jpg"
+  },
+  {
+    "id": "4597509",
+    "name": "Aaliyah Nye",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/aaliyah-nye.jpg"
+  },
+  {
+    "id": "3142242",
+    "name": "Amy Okonkwo",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/amy-okonkwo.jpg"
+  },
+  {
+    "id": "5108587",
+    "name": "Madina Okot",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/madina-okot.jpg"
+  },
+  {
+    "id": "4433431",
+    "name": "Te-Hina Paopao",
+    "team": "Atlanta Dream",
+    "allStar": false,
+    "image": "/players/te-hina-paopao.jpg"
+  },
+  {
+    "id": "4433402",
+    "name": "Angel Reese",
+    "team": "Atlanta Dream",
+    "allStar": true,
+    "image": "/players/angel-reese.jpg"
+  },
+  {
+    "id": "2566186",
+    "name": "Rachel Banham",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/rachel-banham.jpg"
+  },
+  {
+    "id": "4433405",
+    "name": "Kamilla Cardoso",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/kamilla-cardoso.jpg"
+  },
+  {
+    "id": "4066548",
+    "name": "DiJonai Carrington",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/dijonai-carrington.jpg"
+  },
+  {
+    "id": "2529137",
+    "name": "Natasha Cloud",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/natasha-cloud.jpg"
+  },
+  {
+    "id": "4433433",
+    "name": "Aicha Coulibaly",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/aicha-coulibaly.jpg"
+  },
+  {
+    "id": "2491205",
+    "name": "Skylar Diggins",
+    "team": "Chicago Sky",
+    "allStar": true,
+    "image": "/players/skylar-diggins.jpg"
+  },
+  {
+    "id": "4433630",
+    "name": "Rickea Jackson",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/rickea-jackson.jpg"
+  },
+  {
+    "id": "4858656",
+    "name": "Gabriela Jaquez",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/gabriela-jaquez.jpg"
+  },
+  {
+    "id": "4432865",
+    "name": "Jacy Sheldon",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/jacy-sheldon.jpg"
+  },
+  {
+    "id": "3142010",
+    "name": "Azura Stevens",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/azura-stevens.jpg"
+  },
+  {
+    "id": "4594786",
+    "name": "Sydney Taylor",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/sydney-taylor.jpg"
+  },
+  {
+    "id": "981",
+    "name": "Courtney Vandersloot",
+    "team": "Chicago Sky",
+    "allStar": true,
+    "image": "/players/courtney-vandersloot.jpg"
+  },
+  {
+    "id": "4433424",
+    "name": "Maddy Westbeld",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/maddy-westbeld.jpg"
+  },
+  {
+    "id": "2566081",
+    "name": "Elizabeth Williams",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": "/players/elizabeth-williams.jpg"
+  },
+  {
+    "id": "3922628",
+    "name": "Kennedy Burke",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/kennedy-burke.jpg"
+  },
+  {
+    "id": "4433408",
+    "name": "Aaliyah Edwards",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/aaliyah-edwards.jpg"
+  },
+  {
+    "id": "2490553",
+    "name": "Brittney Griner",
+    "team": "Connecticut Sun",
+    "allStar": true,
+    "image": "/players/brittney-griner.jpg"
+  },
+  {
+    "id": "5106232",
+    "name": "Ashlon Jackson",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/ashlon-jackson.jpg"
+  },
+  {
+    "id": "4898898",
+    "name": "Gianna Kneepkens",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/gianna-kneepkens.jpg"
+  },
+  {
+    "id": "5208981",
+    "name": "Leila Lacan",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/leila-lacan.jpg"
+  },
+  {
+    "id": "4703609",
+    "name": "Charlisse Leger-Walker",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/charlisse-leger-walker.jpg"
+  },
+  {
+    "id": "4433635",
+    "name": "Diamond Miller",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/diamond-miller.jpg"
+  },
+  {
+    "id": "4684384",
+    "name": "Aneesah Morrow",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/aneesah-morrow.jpg"
+  },
+  {
+    "id": "4398966",
+    "name": "Olivia Nelson-Ododa",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/olivia-nelson-ododa.jpg"
+  },
+  {
+    "id": "4433514",
+    "name": "Saniya Rivers",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/saniya-rivers.jpg"
+  },
+  {
+    "id": "4433412",
+    "name": "Hailey Van Lith",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": "/players/hailey-van-lith.jpg"
+  },
+  {
+    "id": "4433730",
+    "name": "Paige Bueckers",
+    "team": "Dallas Wings",
+    "allStar": true,
+    "image": "/players/paige-bueckers.jpg"
+  },
+  {
+    "id": "924",
+    "name": "Alysha Clark",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/alysha-clark.jpg"
+  },
+  {
+    "id": "4433790",
+    "name": "Azzi Fudd",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/azzi-fudd.jpg"
+  },
+  {
+    "id": "4433807",
+    "name": "Aziaha James",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/aziaha-james.jpg"
+  },
+  {
+    "id": "4790266",
+    "name": "Awak Kuier",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/awak-kuier.jpg"
+  },
+  {
+    "id": "3904577",
+    "name": "Arike Ogunbowale",
+    "team": "Dallas Wings",
+    "allStar": true,
+    "image": "/players/arike-ogunbowale.jpg"
+  },
+  {
+    "id": "4434015",
+    "name": "JJ Quinerly",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/jj-quinerly.jpg"
+  },
+  {
+    "id": "3906949",
+    "name": "Jessica Shepard",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/jessica-shepard.jpg"
+  },
+  {
+    "id": "4399415",
+    "name": "Maddy Siegrist",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/maddy-siegrist.jpg"
+  },
+  {
+    "id": "2529047",
+    "name": "Odyssey Sims",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/odyssey-sims.jpg"
+  },
+  {
+    "id": "3913881",
+    "name": "Alanna Smith",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/alanna-smith.jpg"
+  },
+  {
+    "id": "5345473",
+    "name": "Costanza Verona",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/costanza-verona.jpg"
+  },
+  {
+    "id": "4336633",
+    "name": "Li Yueru",
+    "team": "Dallas Wings",
+    "allStar": false,
+    "image": "/players/li-yueru.jpg"
+  },
+  {
+    "id": "4432834",
+    "name": "Laeticia Amihere",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/laeticia-amihere.jpg"
+  },
+  {
+    "id": "4398935",
+    "name": "Veronica Burton",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/veronica-burton.jpg"
+  },
+  {
+    "id": "4065780",
+    "name": "Kaila Charles",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/kaila-charles.jpg"
+  },
+  {
+    "id": "4899328",
+    "name": "Kaitlyn Chen",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/kaitlyn-chen.jpg"
+  },
+  {
+    "id": "1054",
+    "name": "Tiffany Hayes",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/tiffany-hayes.jpg"
+  },
+  {
+    "id": "4433634",
+    "name": "Ashten Prechtel",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/ashten-prechtel.jpg"
+  },
+  {
+    "id": "4790263",
+    "name": "Iliana Rupert",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/iliana-rupert.jpg"
+  },
+  {
+    "id": "4790264",
+    "name": "Janelle Salaun",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/janelle-salaun.jpg"
+  },
+  {
+    "id": "4398577",
+    "name": "Miela Sowah",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/miela-sowah.jpg"
+  },
+  {
+    "id": "2590093",
+    "name": "Kiah Stokes",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/kiah-stokes.jpg"
+  },
+  {
+    "id": "2529622",
+    "name": "Kayla Thornton",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/kayla-thornton.jpg"
+  },
+  {
+    "id": "3142328",
+    "name": "Gabby Williams",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/gabby-williams.jpg"
+  },
+  {
+    "id": "4257500",
+    "name": "Cecilia Zandalasini",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": "/players/cecilia-zandalasini.jpg"
+  },
+  {
+    "id": "3142255",
+    "name": "Monique Billings",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/monique-billings.jpg"
+  },
+  {
+    "id": "4432831",
+    "name": "Aliyah Boston",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/aliyah-boston.jpg"
+  },
+  {
+    "id": "4433403",
+    "name": "Caitlin Clark",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/caitlin-clark.jpg"
+  },
+  {
+    "id": "3907781",
+    "name": "Sophie Cunningham",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/sophie-cunningham.jpg"
+  },
+  {
+    "id": "2955898",
+    "name": "Damiris Dantas",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/damiris-dantas.jpg"
+  },
+  {
+    "id": "4898383",
+    "name": "Bree Hall",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/bree-hall.jpg"
+  },
+  {
+    "id": "4065760",
+    "name": "Tyasha Harris",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/tyasha-harris.jpg"
+  },
+  {
+    "id": "3142055",
+    "name": "Myisha Hines-Allen",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/myisha-hines-allen.jpg"
+  },
+  {
+    "id": "4398829",
+    "name": "Lexie Hull",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/lexie-hull.jpg"
+  },
+  {
+    "id": "4433797",
+    "name": "Raven Johnson",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/raven-johnson.jpg"
+  },
+  {
+    "id": "3142191",
+    "name": "Kelsey Mitchell",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/kelsey-mitchell.jpg"
+  },
+  {
+    "id": "4682855",
+    "name": "Justine Pissott",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/justine-pissott.jpg"
+  },
+  {
+    "id": "4433546",
+    "name": "Makayla Timpson",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/makayla-timpson.jpg"
+  },
+  {
+    "id": "5105731",
+    "name": "Grace VanSlooten",
+    "team": "Indiana Fever",
+    "allStar": false,
+    "image": "/players/grace-vanslooten.jpg"
+  },
+  {
+    "id": "4565501",
+    "name": "Janiah Barker",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/janiah-barker.jpg"
+  },
+  {
+    "id": "4433633",
+    "name": "Kierstan Bell",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/kierstan-bell.jpg"
+  },
+  {
+    "id": "4280892",
+    "name": "Chennedy Carter",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/chennedy-carter.jpg"
+  },
+  {
+    "id": "4281190",
+    "name": "Dana Evans",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/dana-evans.jpg"
+  },
+  {
+    "id": "2529122",
+    "name": "Chelsea Gray",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/chelsea-gray.jpg"
+  },
+  {
+    "id": "2987869",
+    "name": "Jewell Loyd",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/jewell-loyd.jpg"
+  },
+  {
+    "id": "2529458",
+    "name": "Cheyenne Parker-Tyus",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/cheyenne-parker-tyus.jpg"
+  },
+  {
+    "id": "4398776",
+    "name": "NaLyssa Smith",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/nalyssa-smith.jpg"
+  },
+  {
+    "id": "3099736",
+    "name": "Stephanie Talbot",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/stephanie-talbot.jpg"
+  },
+  {
+    "id": "3142086",
+    "name": "Brianna Turner",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/brianna-turner.jpg"
+  },
+  {
+    "id": "3149391",
+    "name": "A'ja Wilson",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/aja-wilson.jpg"
+  },
+  {
+    "id": "4065870",
+    "name": "Jackie Young",
+    "team": "Las Vegas Aces",
+    "allStar": false,
+    "image": "/players/jackie-young.jpg"
+  },
+  {
+    "id": "3146151",
+    "name": "Ariel Atkins",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/ariel-atkins.jpg"
+  },
+  {
+    "id": "4433404",
+    "name": "Cameron Brink",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/cameron-brink.jpg"
+  },
+  {
+    "id": "4398764",
+    "name": "Rae Burrell",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/rae-burrell.jpg"
+  },
+  {
+    "id": "2284331",
+    "name": "Emma Cannon",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/emma-cannon.jpg"
+  },
+  {
+    "id": "4433795",
+    "name": "Sania Feagin",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/sania-feagin.jpg"
+  },
+  {
+    "id": "5105729",
+    "name": "Chance Gray",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/chance-gray.jpg"
+  },
+  {
+    "id": "2566106",
+    "name": "Dearica Hamby",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/dearica-hamby.jpg"
+  },
+  {
+    "id": "4609797",
+    "name": "Ta'Niya Latson",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/taniya-latson.jpg"
+  },
+  {
+    "id": "4398907",
+    "name": "Kate Martin",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/kate-martin.jpg"
+  },
+  {
+    "id": "1068",
+    "name": "Nneka Ogwumike",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/nneka-ogwumike.jpg"
+  },
+  {
+    "id": "4874375",
+    "name": "Jihyun Park",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/jihyun-park.jpg"
+  },
+  {
+    "id": "3065570",
+    "name": "Kelsey Plum",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/kelsey-plum.jpg"
+  },
+  {
+    "id": "2491214",
+    "name": "Erica Wheeler",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": "/players/erica-wheeler.jpg"
+  },
+  {
+    "id": "4280850",
+    "name": "Maya Caldwell",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/maya-caldwell.jpg"
+  },
+  {
+    "id": "5345322",
+    "name": "Emma Cechova",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/emma-cechova.jpg"
+  },
+  {
+    "id": "3054590",
+    "name": "Nia Coffey",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/nia-coffey.jpg"
+  },
+  {
+    "id": "3917450",
+    "name": "Napheesa Collier",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/napheesa-collier.jpg"
+  },
+  {
+    "id": "4873358",
+    "name": "Antonia Delaere",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/antonia-delaere.jpg"
+  },
+  {
+    "id": "5345478",
+    "name": "Eliska Hamzova",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/eliska-hamzova.jpg"
+  },
+  {
+    "id": "2529130",
+    "name": "Natasha Howard",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/natasha-howard.jpg"
+  },
+  {
+    "id": "4398938",
+    "name": "Dorka Juhasz",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/dorka-juhasz.jpg"
+  },
+  {
+    "id": "4596309",
+    "name": "Liatu King",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/liatu-king.jpg"
+  },
+  {
+    "id": "5278237",
+    "name": "Anastasiia Olairi Kosu",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/anastasiia-olairi-kosu.jpg"
+  },
+  {
+    "id": "2529205",
+    "name": "Kayla McBride",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/kayla-mcbride.jpg"
+  },
+  {
+    "id": "3913903",
+    "name": "Teaira McCowan",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/teaira-mccowan.jpg"
+  },
+  {
+    "id": "4433791",
+    "name": "Olivia Miles",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/olivia-miles.jpg"
+  },
+  {
+    "id": "2987891",
+    "name": "Courtney Williams",
+    "team": "Minnesota Lynx",
+    "allStar": false,
+    "image": "/players/courtney-williams.jpg"
+  },
+  {
+    "id": "3102133",
+    "name": "Rebecca Allen",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/rebecca-allen.jpg"
+  },
+  {
+    "id": "5345320",
+    "name": "Pauline Astier",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/pauline-astier.jpg"
+  },
+  {
+    "id": "4683006",
+    "name": "Leonie Fiebich",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/leonie-fiebich.jpg"
+  },
+  {
+    "id": "2327695",
+    "name": "Rebekah Gardner",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/rebekah-gardner.jpg"
+  },
+  {
+    "id": "4066533",
+    "name": "Sabrina Ionescu",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/sabrina-ionescu.jpg"
+  },
+  {
+    "id": "4038379",
+    "name": "Marine Johannes",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/marine-johannes.jpg"
+  },
+  {
+    "id": "2999101",
+    "name": "Jonquel Jones",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/jonquel-jones.jpg"
+  },
+  {
+    "id": "2593770",
+    "name": "Betnijah Laney-Hamilton",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/betnijah-laney-hamilton.jpg"
+  },
+  {
+    "id": "4281930",
+    "name": "Anneli Maley",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/anneli-maley.jpg"
+  },
+  {
+    "id": "4281929",
+    "name": "Satou Sabally",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/satou-sabally.jpg"
+  },
+  {
+    "id": "2998928",
+    "name": "Breanna Stewart",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/breanna-stewart.jpg"
+  },
+  {
+    "id": "4337216",
+    "name": "Han Xu",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": "/players/han-xu.jpg"
+  },
+  {
+    "id": "5274110",
+    "name": "Monique Akoa Makani",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/monique-akoa-makani.jpg"
+  },
+  {
+    "id": "869",
+    "name": "DeWanna Bonner",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/dewanna-bonner.jpg"
+  },
+  {
+    "id": "5345524",
+    "name": "Noemie Brochant",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/noemie-brochant.jpg"
+  },
+  {
+    "id": "2998938",
+    "name": "Kahleah Copper",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/kahleah-copper.jpg"
+  },
+  {
+    "id": "4399342",
+    "name": "Lexi Held",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/lexi-held.jpg"
+  },
+  {
+    "id": "4873359",
+    "name": "Kyara Linskens",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/kyara-linskens.jpg"
+  },
+  {
+    "id": "4068042",
+    "name": "Natasha Mack",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/natasha-mack.jpg"
+  },
+  {
+    "id": "4704594",
+    "name": "Marta Suarez",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/marta-suarez.jpg"
+  },
+  {
+    "id": "2529140",
+    "name": "Alyssa Thomas",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/alyssa-thomas.jpg"
+  },
+  {
+    "id": "887",
+    "name": "Sami Whitcomb",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/sami-whitcomb.jpg"
+  },
+  {
+    "id": "4282168",
+    "name": "Kiana Williams",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": "/players/kiana-williams.jpg"
+  },
+  {
+    "id": "4703794",
+    "name": "Sarah Ashlee Barker",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/sarah-ashlee-barker.jpg"
+  },
+  {
+    "id": "5105406",
+    "name": "Frieda Buhner",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/frieda-buhner.jpg"
+  },
+  {
+    "id": "3906972",
+    "name": "Bridget Carleton",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/bridget-carleton.jpg"
+  },
+  {
+    "id": "4398729",
+    "name": "Emily Engstler",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/emily-engstler.jpg"
+  },
+  {
+    "id": "4682797",
+    "name": "Luisa Geiselsoder",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/luisa-geiselsoder.jpg"
+  },
+  {
+    "id": "3934218",
+    "name": "Megan Gustafson",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/megan-gustafson.jpg"
+  },
+  {
+    "id": "5208982",
+    "name": "Carla Leite",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/carla-leite.jpg"
+  },
+  {
+    "id": "5209202",
+    "name": "Nyadiew Puoch",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/nyadiew-puoch.jpg"
+  },
+  {
+    "id": "3056730",
+    "name": "Karlie Samuelson",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/karlie-samuelson.jpg"
+  },
+  {
+    "id": "5108550",
+    "name": "Serah Williams",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/serah-williams.jpg"
+  },
+  {
+    "id": "4433690",
+    "name": "Holly Winterburn",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": "/players/holly-winterburn.jpg"
+  },
+  {
+    "id": "3058892",
+    "name": "Lexie Brown",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/lexie-brown.jpg"
+  },
+  {
+    "id": "4432832",
+    "name": "Zia Cooke",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/zia-cooke.jpg"
+  },
+  {
+    "id": "2529183",
+    "name": "Stefanie Dolson",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/stefanie-dolson.jpg"
+  },
+  {
+    "id": "3906753",
+    "name": "Natisha Hiedeman",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/natisha-hiedeman.jpg"
+  },
+  {
+    "id": "4068161",
+    "name": "Joyner Holmes",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/joyner-holmes.jpg"
+  },
+  {
+    "id": "4433643",
+    "name": "Mackenzie Holmes",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/mackenzie-holmes.jpg"
+  },
+  {
+    "id": "4432830",
+    "name": "Jordan Horston",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/jordan-horston.jpg"
+  },
+  {
+    "id": "4698736",
+    "name": "Flau'jae Johnson",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/flaujae-johnson.jpg"
+  },
+  {
+    "id": "4420318",
+    "name": "Ezi Magbegor",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/ezi-magbegor.jpg"
+  },
+  {
+    "id": "5106222",
+    "name": "Taina Mair",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/taina-mair.jpg"
+  },
+  {
+    "id": "5220150",
+    "name": "Dominique Malonga",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/dominique-malonga.jpg"
+  },
+  {
+    "id": "5017726",
+    "name": "Jade Melbourne",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/jade-melbourne.jpg"
+  },
+  {
+    "id": "3917453",
+    "name": "Katie Lou Samuelson",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/katie-lou-samuelson.jpg"
+  },
+  {
+    "id": "4898400",
+    "name": "Taylor Thierry",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": "/players/taylor-thierry.jpg"
+  },
+  {
+    "id": "4001679",
+    "name": "Julie Allemand",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/julie-allemand.jpg"
+  },
+  {
+    "id": "2569044",
+    "name": "Temi Fagbenle",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/temi-fagbenle.jpg"
+  },
+  {
+    "id": "2566453",
+    "name": "Isabelle Harrison",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/isabelle-harrison.jpg"
+  },
+  {
+    "id": "5345444",
+    "name": "Laura Juskaite",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/laura-juskaite.jpg"
+  },
+  {
+    "id": "4434020",
+    "name": "Teonni Key",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/teonni-key.jpg"
+  },
+  {
+    "id": "3904576",
+    "name": "Marina Mabrey",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/marina-mabrey.jpg"
+  },
+  {
+    "id": "3142327",
+    "name": "Kia Nurse",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/kia-nurse.jpg"
+  },
+  {
+    "id": "4565505",
+    "name": "Kiki Rice",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/kiki-rice.jpg"
+  },
+  {
+    "id": "4398768",
+    "name": "Nyara Sabally",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/nyara-sabally.jpg"
+  },
+  {
+    "id": "2988756",
+    "name": "Brittney Sykes",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": "/players/brittney-sykes.jpg"
+  },
+  {
+    "id": "4704180",
+    "name": "Georgia Amoore",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/georgia-amoore.jpg"
+  },
+  {
+    "id": "4398911",
+    "name": "Shakira Austin",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/shakira-austin.jpg"
+  },
+  {
+    "id": "5105737",
+    "name": "Lauren Betts",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/lauren-betts.jpg"
+  },
+  {
+    "id": "4433524",
+    "name": "Sonia Citron",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/sonia-citron.jpg"
+  },
+  {
+    "id": "4433411",
+    "name": "Angela Dugalic",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/angela-dugalic.jpg"
+  },
+  {
+    "id": "4433523",
+    "name": "Rori Harmon",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/rori-harmon.jpg"
+  },
+  {
+    "id": "4898384",
+    "name": "Kiki Iriafen",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/kiki-iriafen.jpg"
+  },
+  {
+    "id": "5106145",
+    "name": "Darianna Littlepage-Buggs",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/darianna-littlepage-buggs.jpg"
+  },
+  {
+    "id": "4583144",
+    "name": "Cotie McMahon",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/cotie-mcmahon.jpg"
+  },
+  {
+    "id": "4433815",
+    "name": "Lucy Olsen",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/lucy-olsen.jpg"
+  },
+  {
+    "id": "4282173",
+    "name": "Michaela Onyenwere",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/michaela-onyenwere.jpg"
+  },
+  {
+    "id": "5122345",
+    "name": "Cassandre Prosper",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": "/players/cassandre-prosper.jpg"
+  },
+  {
+    "id": "4433542",
+    "name": "Saylor Poffenbarger",
+    "team": "Chicago Sky",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5345319",
+    "name": "Nell Angloma",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5105732",
+    "name": "Raegan Beers",
+    "team": "Connecticut Sun",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5277552",
+    "name": "Juste Jocyte",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5106170",
+    "name": "Ndjakalenga Mwenentanda",
+    "team": "Golden State Valkyries",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5107515",
+    "name": "Laura Ziegler",
+    "team": "Los Angeles Sparks",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "4790258",
+    "name": "Raquel Carrera",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "4790260",
+    "name": "Marine Fauthoux",
+    "team": "New York Liberty",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "3919496",
+    "name": "Valeriane Ayayi",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5107404",
+    "name": "Quionche Carter",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "3906769",
+    "name": "Jovana Nogic",
+    "team": "Phoenix Mercury",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5108051",
+    "name": "Jordan Harrison",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5346554",
+    "name": "Teja Oblak",
+    "team": "Portland Fire",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5345325",
+    "name": "Awa Fam",
+    "team": "Seattle Storm",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "3910470",
+    "name": "Maria Conde",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5355509",
+    "name": "Tima Pouye",
+    "team": "Toronto Tempo",
+    "allStar": false,
+    "image": null
+  },
+  {
+    "id": "5349415",
+    "name": "Alicia Florez Getino",
+    "team": "Washington Mystics",
+    "allStar": false,
+    "image": null
+  }
+]
