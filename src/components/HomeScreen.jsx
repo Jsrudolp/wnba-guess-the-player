@@ -1,14 +1,50 @@
-function BasketballIcon() {
+import { useEffect, useRef } from 'react'
+
+function PixelPreview({ src }) {
+  const canvasRef = useRef(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    const W = canvas.width, H = canvas.height
+    const PIXEL = 20
+
+    const img = new Image()
+    img.onload = () => {
+      const lowW = Math.round(W / PIXEL)
+      const lowH = Math.round(H / PIXEL)
+      const { naturalWidth: iW, naturalHeight: iH } = img
+      const aspect = W / H
+      let sx, sy, sw, sh
+      if (iW / iH > aspect) {
+        sh = iH; sw = iH * aspect; sx = (iW - sw) / 2; sy = 0
+      } else {
+        sw = iW; sh = iW / aspect; sx = 0; sy = 0
+      }
+      ctx.imageSmoothingEnabled = true
+      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, lowW, lowH)
+      const tmp = document.createElement('canvas')
+      tmp.width = lowW; tmp.height = lowH
+      tmp.getContext('2d').drawImage(canvas, 0, 0)
+      ctx.clearRect(0, 0, W, H)
+      ctx.imageSmoothingEnabled = false
+      ctx.drawImage(tmp, 0, 0, W, H)
+    }
+    img.src = src
+  }, [src])
+
   return (
-    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="28" cy="28" r="26" fill="#FF5C00"/>
-      <path d="M2.5 28h51" stroke="white" strokeWidth="1.6" strokeOpacity="0.55"/>
-      <path d="M28 2.5v51" stroke="white" strokeWidth="1.6" strokeOpacity="0.55"/>
-      <path d="M13 4.5C20 17 20 39 13 51.5" stroke="white" strokeWidth="1.6" strokeOpacity="0.55" fill="none"/>
-      <path d="M43 4.5C36 17 36 39 43 51.5" stroke="white" strokeWidth="1.6" strokeOpacity="0.55" fill="none"/>
-    </svg>
+    <canvas
+      ref={canvasRef}
+      width={300}
+      height={160}
+      style={{ width: '100%', height: 'auto', display: 'block' }}
+    />
   )
 }
+
+
 
 function MoonIcon() {
   return (
@@ -27,7 +63,28 @@ function SunIcon() {
   )
 }
 
-export default function HomeScreen({ gameMode, setGameMode, difficulty, setDifficulty, onPlay, hasPlayers, isDark, toggleTheme }) {
+const DIFFICULTY_ORDER = ['easy', 'medium', 'hard', 'impossible']
+const PREV_LABEL = { medium: 'Normal', hard: 'Blur', impossible: 'Pixel' }
+
+function unlockRequirement(gameMode) {
+  return gameMode === 'quick' ? 'Score 10/10' : 'Score 80%'
+}
+
+function LockIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <rect x="4" y="9" width="12" height="9" rx="2" fill="currentColor"/>
+      <path d="M7 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+    </svg>
+  )
+}
+
+export default function HomeScreen({ gameMode, setGameMode, difficulty, setDifficulty, poolCounts = {}, completions = {}, onPlay, hasPlayers, isDark, toggleTheme }) {
+  function isLocked(id) {
+    const idx = DIFFICULTY_ORDER.indexOf(id)
+    if (idx === 0) return false
+    return !completions[`${gameMode}:${DIFFICULTY_ORDER[idx - 1]}`]
+  }
   return (
     <div className="home">
       <button className="home-theme-toggle" onClick={toggleTheme} aria-label="Toggle dark mode">
@@ -36,48 +93,70 @@ export default function HomeScreen({ gameMode, setGameMode, difficulty, setDiffi
 
       <div className="home-logo-section">
         <div className="home-logo-icon">
-          <BasketballIcon />
+          <img src="/wnba-guessr-logo.svg" alt="WNBA Guessr" className="home-logo-img" />
         </div>
         <h1 className="home-wordmark">Guess The Player</h1>
-        <p className="home-hook">Are you smarter than a commentator?</p>
       </div>
 
       <div className="home-controls">
         <div className="control-group">
-          <div className="control-label">Mode</div>
+          <div className="control-label">Pool</div>
           <div className="toggle-group">
             {[
-              { id: 'quick',    label: 'Quick Play' },
-              { id: 'allstars', label: 'All-Stars' },
-              { id: 'all',      label: 'All Players' },
-            ].map(({ id, label }) => (
+              { id: 'quick',    label: 'Quick Play', sub: `${poolCounts.quick ?? 10} players` },
+              { id: 'allstars', label: 'All-Stars',  sub: `${poolCounts.allstars ?? 0} players` },
+              { id: 'all',      label: 'All Players', sub: `${poolCounts.all ?? 0} players` },
+            ].map(({ id, label, sub }) => (
               <button
                 key={id}
                 className={`toggle-btn${gameMode === id ? ' active' : ''}`}
                 onClick={() => setGameMode(id)}
               >
-                {label}
+                <span className="toggle-btn-label">{label}</span>
+                <span className="toggle-btn-sub">{sub}</span>
               </button>
             ))}
           </div>
         </div>
 
+
         <div className="control-group">
-          <div className="control-label">Difficulty</div>
-          <div className="toggle-group">
+          <div className="control-label">Mode</div>
+          <div className="difficulty-cards">
             {[
-              { id: 'easy',   label: 'Easy' },
-              { id: 'medium', label: 'Medium' },
-              { id: 'hard',   label: 'Hard' },
-            ].map(({ id, label }) => (
-              <button
-                key={id}
-                className={`toggle-btn${difficulty === id ? ' active' : ''}`}
-                onClick={() => setDifficulty(id)}
-              >
-                {label}
-              </button>
-            ))}
+              { id: 'easy',       label: 'Normal',     filter: 'none' },
+              { id: 'medium',     label: 'Blur',       filter: 'blur(10px)' },
+              { id: 'hard',       label: 'Pixel',      filter: null },
+              { id: 'impossible', label: 'Silhouette', filter: null },
+            ].map(({ id, label, filter }) => {
+              const locked = isLocked(id)
+              return (
+                <div key={id} className={`difficulty-card-wrap${locked ? ' locked' : ''}`}>
+                  <button
+                    className={`difficulty-card${difficulty === id && !locked ? ' active' : ''}${locked ? ' locked' : ''}`}
+                    onClick={() => !locked && setDifficulty(id)}
+                  >
+                    <div className={`difficulty-card-img-wrap${id === 'hard' || id === 'impossible' ? ` ${id}` : ''}`}>
+                      {id === 'hard'
+                        ? <PixelPreview src="/players/aja-wilson.jpg" />
+                        : <img src="/players/aja-wilson.jpg" alt="" style={filter ? { filter } : undefined} draggable={false} />
+                      }
+                    </div>
+                    {locked && (
+                      <div className="lock-overlay">
+                        <LockIcon />
+                      </div>
+                    )}
+                    <span className="difficulty-card-label">{label}</span>
+                  </button>
+                  {locked && (
+                    <div className="lock-tooltip">
+                      {unlockRequirement(gameMode)} on {PREV_LABEL[id]} to unlock
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
 

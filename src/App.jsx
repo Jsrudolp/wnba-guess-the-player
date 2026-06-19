@@ -21,13 +21,19 @@ function buildGame(gameMode, allPlayers) {
       : allPlayers
 
   const shuffledPool = shuffle(pool)
-  const gamePlayers = shuffledPool.slice(0, Math.min(10, shuffledPool.length))
+  const gamePlayers = gameMode === 'quick'
+    ? shuffledPool.slice(0, Math.min(10, shuffledPool.length))
+    : shuffledPool
 
-  const wrongCandidates = shuffle(allPlayers.filter(p => !gamePlayers.find(gp => gp.id === p.id)))
+  const allStars = allPlayers.filter(p => p.allStar)
 
-  const questions = gamePlayers.map((player, i) => {
-    const offset = i * 3
-    const wrongs = [0, 1, 2].map(j => wrongCandidates[(offset + j) % wrongCandidates.length])
+  const questions = gamePlayers.map((player) => {
+    let wrongs
+    if (gameMode === 'allstars') {
+      wrongs = shuffle(allStars.filter(p => p.id !== player.id)).slice(0, 3)
+    } else {
+      wrongs = shuffle(allPlayers.filter(p => p.id !== player.id)).slice(0, 3)
+    }
     const choices = shuffle([player, ...wrongs])
     return { player, choices }
   })
@@ -35,16 +41,28 @@ function buildGame(gameMode, allPlayers) {
   return questions
 }
 
+
 function GameApp({ isDark, toggleTheme }) {
   const allPlayers = playersData
 
   const [screen, setScreen] = useState('home')
   const [gameMode, setGameMode] = useState('quick')
   const [difficulty, setDifficulty] = useState('easy')
+  const [answerMode, setAnswerMode] = useState('casual')
+  const [completions, setCompletions] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('wnba-completions')) ?? {}
+    } catch { return {} }
+  })
   const [questions, setQuestions] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [results, setResults] = useState([])
+  const pixelSize = 24
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--medium-blur', '18px')
+  }, [])
 
   const startGame = useCallback(() => {
     if (allPlayers.length < 4) return
@@ -61,6 +79,17 @@ function GameApp({ isDark, toggleTheme }) {
     setScore(newScore)
     setResults(prev => [...prev, { player: questions[currentIndex].player, isCorrect }])
     if (currentIndex >= questions.length - 1) {
+      const total = questions.length
+      const required = gameMode === 'quick' ? total : Math.ceil(total * 0.8)
+      if (newScore >= required) {
+        setCompletions(prev => {
+          const key = `${gameMode}:${difficulty}`
+          if (prev[key]) return prev
+          const updated = { ...prev, [key]: true }
+          localStorage.setItem('wnba-completions', JSON.stringify(updated))
+          return updated
+        })
+      }
       setScreen('result')
     } else {
       setCurrentIndex(i => i + 1)
@@ -88,6 +117,12 @@ function GameApp({ isDark, toggleTheme }) {
           setGameMode={setGameMode}
           difficulty={difficulty}
           setDifficulty={setDifficulty}
+          poolCounts={{
+            quick: 10,
+            allstars: allPlayers.filter(p => p.allStar).length,
+            all: allPlayers.length,
+          }}
+          completions={completions}
           onPlay={startGame}
           hasPlayers={allPlayers.length >= 4}
           isDark={isDark}
@@ -100,6 +135,10 @@ function GameApp({ isDark, toggleTheme }) {
           questionIndex={currentIndex}
           total={questions.length}
           difficulty={difficulty}
+          answerMode={answerMode}
+          setAnswerMode={setAnswerMode}
+          allPlayers={allPlayers}
+          pixelSize={pixelSize}
           onNext={handleNext}
         />
       )}
@@ -112,6 +151,7 @@ function GameApp({ isDark, toggleTheme }) {
           onChangeSettings={changeSettings}
         />
       )}
+
     </div>
   )
 }
