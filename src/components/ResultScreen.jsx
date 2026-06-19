@@ -4,7 +4,7 @@ const VERDICTS = [
   { min: 0,  max: 3,  text: 'Keep watching' },
   { min: 4,  max: 6,  text: 'Not bad'        },
   { min: 7,  max: 9,  text: 'Real fan'        },
-  { min: 10, max: 10, text: "You're a superfan" },
+  { min: 10, max: 10, text: 'Superfan'        },
 ]
 
 function getVerdict(score, total) {
@@ -15,42 +15,30 @@ function getVerdict(score, total) {
   return VERDICTS[0].text
 }
 
-function BreakdownItem({ result, index }) {
-  const [imgErr, setImgErr] = useState(false)
-  const delay = `${0.6 + index * 0.05}s`
-
+function ScoreBlock({ isCorrect, index }) {
   return (
     <div
-      className={`breakdown-item ${result.isCorrect ? 'correct' : 'wrong'}`}
-      style={{ animationDelay: delay }}
-    >
-      <div className="breakdown-thumb-wrap">
-        {result.player.image && !imgErr ? (
-          <img
-            src={result.player.image}
-            alt={result.player.name}
-            className="breakdown-thumb"
-            onError={() => setImgErr(true)}
-          />
-        ) : (
-          <div className="breakdown-thumb-empty">
-            <svg width="16" height="16" viewBox="0 0 36 36" fill="none">
-              <circle cx="18" cy="12" r="7" fill="currentColor"/>
-              <path d="M4 32c0-7.7 6.3-14 14-14s14 6.3 14 14" fill="currentColor"/>
-            </svg>
-          </div>
-        )}
-        <div className={`breakdown-badge ${result.isCorrect ? 'correct' : 'wrong'}`}>
-          {result.isCorrect ? '✓' : '✗'}
-        </div>
-      </div>
-      <p className="breakdown-name">{result.player.name.split(' ').slice(-1)[0]}</p>
-    </div>
+      className={`score-block ${isCorrect ? 'correct' : 'wrong'}`}
+      style={{ animationDelay: `${0.35 + index * 0.04}s` }}
+    />
   )
+}
+
+function getDisplayBlocks(results) {
+  if (results.length <= 10) return results.map(r => ({ isCorrect: r.isCorrect }))
+  return Array.from({ length: 10 }, (_, i) => {
+    const start = Math.floor(i * results.length / 10)
+    const end = Math.floor((i + 1) * results.length / 10)
+    const chunk = results.slice(start, end)
+    const correct = chunk.filter(r => r.isCorrect).length
+    return { isCorrect: correct > chunk.length / 2 }
+  })
 }
 
 export default function ResultScreen({ score, total, results = [], onPlayAgain, onChangeSettings }) {
   const [displayed, setDisplayed] = useState(0)
+  const [email, setEmail] = useState('')
+  const [subState, setSubState] = useState('idle')
 
   useEffect(() => {
     const start = performance.now()
@@ -66,32 +54,76 @@ export default function ResultScreen({ score, total, results = [], onPlayAgain, 
 
   const verdict = getVerdict(score, total)
 
+  async function handleSubscribe(e) {
+    e.preventDefault()
+    if (!email || subState !== 'idle') return
+    setSubState('loading')
+    try {
+      await fetch(import.meta.env.VITE_GOOGLE_SHEET_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, site: 'wnba-guessr' }),
+      })
+    } catch {}
+    setSubState('done')
+  }
+
   return (
     <div className="result">
-      <p className="result-eyebrow">Final Score</p>
 
-      <div className="result-score-wrap">
-        <span className="result-score-num">{displayed}</span>
-        <div className="result-score-denom">
-          <span className="result-score-slash">/</span>
-          <span className="result-score-total">{total}</span>
+      <div className="result-score-panel">
+        <div className="result-score-inner">
+          <p className="result-eyebrow">Final Score</p>
+          <div className="result-score-wrap">
+            <span className="result-score-num">{displayed}</span>
+            <div className="result-score-denom">
+              <span className="result-score-slash">/</span>
+              <span className="result-score-total">{total}</span>
+            </div>
+          </div>
+          <p className="result-verdict">{verdict}</p>
         </div>
       </div>
 
-      <p className="result-verdict">{verdict}</p>
-
       {results.length > 0 && (
         <div className="result-breakdown">
-          {results.map((result, i) => (
-            <BreakdownItem key={i} result={result} index={i} />
+          {getDisplayBlocks(results).map((block, i) => (
+            <ScoreBlock key={i} isCorrect={block.isCorrect} index={i} />
           ))}
         </div>
       )}
 
-      <div className="result-actions">
-        <button className="btn-primary" onClick={onPlayAgain}>Play Again</button>
-        <button className="btn-secondary" onClick={onChangeSettings}>Change Settings</button>
+      <div className="result-side-panel">
+        <div className="result-subscribe">
+          <p className="subscribe-eyebrow">Every Thursday</p>
+          <p className="subscribe-heading">A new WNBA experience</p>
+          <p className="subscribe-sub">Data visualizations, minigames, 3D interactive trophy shelves — a new drop every week. Don't miss it.</p>
+          {subState === 'done' ? (
+            <p className="subscribe-success">You're in — we'll be in touch.</p>
+          ) : (
+            <form className="subscribe-form" onSubmit={handleSubscribe}>
+              <input
+                type="email"
+                className="subscribe-input"
+                placeholder="your@email.com"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                required
+              />
+              <button type="submit" className="subscribe-btn" disabled={subState === 'loading'}>
+                {subState === 'loading' ? '…' : 'Notify Me'}
+              </button>
+            </form>
+          )}
+        </div>
+
+        <div className="result-actions">
+          <button className="btn-primary" onClick={onPlayAgain}>Play Again</button>
+          <button className="btn-secondary" onClick={onChangeSettings}>Change Settings</button>
+        </div>
       </div>
+
     </div>
   )
 }

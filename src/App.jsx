@@ -132,6 +132,7 @@ function GameApp({ isDark, toggleTheme }) {
       {screen === 'game' && questions.length > 0 && (
         <GameScreen
           question={questions[currentIndex]}
+          nextImage={questions[currentIndex + 1]?.player?.image}
           questionIndex={currentIndex}
           total={questions.length}
           difficulty={difficulty}
@@ -140,6 +141,7 @@ function GameApp({ isDark, toggleTheme }) {
           allPlayers={allPlayers}
           pixelSize={pixelSize}
           onNext={handleNext}
+          onBack={changeSettings}
         />
       )}
       {screen === 'result' && (

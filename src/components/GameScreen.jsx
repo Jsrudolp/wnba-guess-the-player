@@ -269,14 +269,19 @@ function ExpertInput({ allPlayers, player, answered, onAnswer }) {
   )
 }
 
-export default function GameScreen({ question, questionIndex, total, difficulty, answerMode = 'casual', setAnswerMode, allPlayers = [], pixelSize = 10, onNext }) {
+export default function GameScreen({ question, nextImage, questionIndex, total, difficulty, answerMode = 'casual', setAnswerMode, allPlayers = [], pixelSize = 10, onNext, onBack }) {
   const { player, choices } = question
   const [answered, setAnswered] = useState(null)
   const [revealing, setRevealing] = useState(false)
   const [imgError, setImgError] = useState(false)
   const timerRef = useRef(null)
-  const frameRef = useRef(null)
   const onErrorCb = useCallback(() => setImgError(true), [])
+
+  useEffect(() => {
+    if (!nextImage) return
+    const img = new Image()
+    img.src = nextImage
+  }, [nextImage])
 
   useEffect(() => {
     setAnswered(null)
@@ -286,13 +291,7 @@ export default function GameScreen({ question, questionIndex, total, difficulty,
   }, [questionIndex, pixelSize])
 
   function exitAndAdvance(isCorrect) {
-    const el = frameRef.current
-    if (el) {
-      el.style.transition = 'opacity 0.14s ease, transform 0.14s ease'
-      el.style.opacity = '0'
-      el.style.transform = 'translateY(-10px)'
-    }
-    setTimeout(() => onNext(isCorrect), 150)
+    onNext(isCorrect)
   }
 
   function commit(chosenPlayer) {
@@ -330,6 +329,11 @@ export default function GameScreen({ question, questionIndex, total, difficulty,
     <div className="game">
       <div className="game-topbar">
         <div className="topbar-left">
+          <button className="topbar-back" onClick={onBack} aria-label="Back to home">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
           <img src="/wnba-guessr-logo.svg" alt="" className="topbar-logo" />
           <span className="game-counter">
             <strong>{questionIndex + 1}</strong> / {total}
@@ -351,7 +355,6 @@ export default function GameScreen({ question, questionIndex, total, difficulty,
       <div className="question-frame">
         <div
           key={questionIndex}
-          ref={frameRef}
           className={`player-image-wrap${revealing ? ' revealing' : ''}`}
           data-difficulty={difficulty}
         >
