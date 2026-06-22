@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
+import posthog from 'posthog-js'
 import HomeScreen from './components/HomeScreen.jsx'
 import GameScreen from './components/GameScreen.jsx'
 import ResultScreen from './components/ResultScreen.jsx'
@@ -58,6 +59,7 @@ function GameApp({ isDark, toggleTheme }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [results, setResults] = useState([])
+  const [unlockedNewLevel, setUnlockedNewLevel] = useState(false)
   const pixelSize = 24
 
   useEffect(() => {
@@ -72,7 +74,8 @@ function GameApp({ isDark, toggleTheme }) {
     setScore(0)
     setResults([])
     setScreen('game')
-  }, [gameMode, allPlayers])
+    posthog.capture('game_started', { game_mode: gameMode, difficulty })
+  }, [gameMode, difficulty, allPlayers])
 
   const handleNext = useCallback((isCorrect) => {
     const newScore = score + (isCorrect ? 1 : 0)
@@ -81,15 +84,25 @@ function GameApp({ isDark, toggleTheme }) {
     if (currentIndex >= questions.length - 1) {
       const total = questions.length
       const required = gameMode === 'quick' ? total : Math.ceil(total * 0.8)
+      let didUnlock = false
       if (newScore >= required) {
         setCompletions(prev => {
           const key = `${gameMode}:${difficulty}`
           if (prev[key]) return prev
           const updated = { ...prev, [key]: true }
           localStorage.setItem('wnba-completions', JSON.stringify(updated))
+          didUnlock = true
+          setUnlockedNewLevel(true)
           return updated
         })
       }
+      posthog.capture('game_completed', {
+        game_mode: gameMode,
+        difficulty,
+        score: newScore,
+        total,
+        unlocked_new_level: didUnlock,
+      })
       setScreen('result')
     } else {
       setCurrentIndex(i => i + 1)
@@ -102,10 +115,12 @@ function GameApp({ isDark, toggleTheme }) {
     setCurrentIndex(0)
     setScore(0)
     setResults([])
+    setUnlockedNewLevel(false)
     setScreen('game')
   }, [gameMode, allPlayers])
 
   const changeSettings = useCallback(() => {
+    setUnlockedNewLevel(false)
     setScreen('home')
   }, [])
 
@@ -149,6 +164,7 @@ function GameApp({ isDark, toggleTheme }) {
           score={score}
           total={questions.length}
           results={results}
+          unlockedNewLevel={unlockedNewLevel}
           onPlayAgain={playAgain}
           onChangeSettings={changeSettings}
         />
