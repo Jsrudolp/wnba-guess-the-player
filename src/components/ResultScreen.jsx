@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import posthog from 'posthog-js'
 
 const VERDICTS = [
   { min: 0,  max: 3,  text: 'Keep watching' },
@@ -35,10 +36,11 @@ function getDisplayBlocks(results) {
   })
 }
 
-export default function ResultScreen({ score, total, results = [], onPlayAgain, onChangeSettings }) {
+export default function ResultScreen({ score, total, results = [], unlockedNewLevel, onPlayAgain, onChangeSettings }) {
   const [displayed, setDisplayed] = useState(0)
   const [email, setEmail] = useState('')
   const [subState, setSubState] = useState('idle')
+  const [copied, setCopied] = useState(false)
 
   useEffect(() => {
     const start = performance.now()
@@ -66,7 +68,24 @@ export default function ResultScreen({ score, total, results = [], onPlayAgain, 
         body: JSON.stringify({ email, site: 'wnba-guessr' }),
       })
     } catch {}
+    posthog.capture('email_subscribed', { site: 'wnba-guessr' })
     setSubState('done')
+  }
+
+  async function handleShare() {
+    const text = `${verdict}. ${score}/${total} on WNBA Guess the Player.`
+    const url = window.location.href
+    if (navigator.share) {
+      try {
+        await navigator.share({ text, url })
+        posthog.capture('game_shared', { method: 'native', score, total })
+      } catch {}
+    } else {
+      await navigator.clipboard.writeText(`${text} ${url}`)
+      posthog.capture('game_shared', { method: 'clipboard', score, total })
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
   }
 
   return (
@@ -98,9 +117,9 @@ export default function ResultScreen({ score, total, results = [], onPlayAgain, 
         <div className="result-subscribe">
           <p className="subscribe-eyebrow">Every Thursday</p>
           <p className="subscribe-heading">A new WNBA experience</p>
-          <p className="subscribe-sub">Data visualizations, minigames, 3D interactive trophy shelves — a new drop every week. Don't miss it.</p>
+          <p className="subscribe-sub">Data visualizations, minigames, 3D interactive trophy shelves. A new drop every week. Don't miss it.</p>
           {subState === 'done' ? (
-            <p className="subscribe-success">You're in — we'll be in touch.</p>
+            <p className="subscribe-success">You're in. We'll be in touch.</p>
           ) : (
             <form className="subscribe-form" onSubmit={handleSubscribe}>
               <input
@@ -119,7 +138,16 @@ export default function ResultScreen({ score, total, results = [], onPlayAgain, 
         </div>
 
         <div className="result-actions">
-          <button className="btn-primary" onClick={onPlayAgain}>Play Again</button>
+          <button className="btn-primary" onClick={onPlayAgain}>{unlockedNewLevel ? 'Next Level' : 'Play Again'}</button>
+          <button className="btn-share" onClick={handleShare}>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="12" cy="3" r="1.5" stroke="currentColor" strokeWidth="1.4"/>
+              <circle cx="12" cy="13" r="1.5" stroke="currentColor" strokeWidth="1.4"/>
+              <circle cx="3" cy="8" r="1.5" stroke="currentColor" strokeWidth="1.4"/>
+              <path d="M4.4 7.2l6.2-3.4M4.4 8.8l6.2 3.4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+            </svg>
+            {copied ? 'Copied!' : 'Share Result'}
+          </button>
           <button className="btn-secondary" onClick={onChangeSettings}>Change Settings</button>
         </div>
       </div>
